@@ -1,5 +1,7 @@
-Symfony Standard Edition
-========================
+loyalty-app
+===========
+
+#Symfony Standard Edition
 
 Welcome to the Symfony Standard Edition - a fully-functional Symfony2
 application that you can use as the skeleton for your new applications.
@@ -168,3 +170,5 @@ Enjoy!
 [11]: http://symfony.com/doc/2.6/cookbook/logging/monolog.html
 [12]: http://symfony.com/doc/2.6/cookbook/assetic/asset_management.html
 [13]: http://symfony.com/doc/2.6/bundles/SensioGeneratorBundle/index.html
+loyalty-app
+===========
