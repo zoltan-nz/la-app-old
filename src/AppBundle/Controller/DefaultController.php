@@ -25,11 +25,11 @@ class DefaultController extends Controller
     }
 
     /**
-     * @Route("/hello/{name}", name="hello")
+     * @Route("/hello/{name}.{_format}", defaults={"_format"="html", "name"="there"}, name="hello")
      */
-    public function helloAction($name)
+    public function helloAction($name, $_format)
     {
-        return $this->render('default/hello.html.twig', array(
+        return $this->render('default/hello.'.$_format.'.twig', array(
             'name' => $name
         ));
     }
