@@ -13,7 +13,8 @@ class DefaultController extends Controller
      */
     public function indexAction()
     {
-        return $this->render('default/index.html.twig', ['page_title' => 'Home Page']);
+//        return $this->render('default/index.html.twig', ['page_title' => 'Home Page']);
+        return $this->redirectToRoute('hello', ['name'=>'zoltan']);
     }
 
     /**
@@ -25,7 +26,19 @@ class DefaultController extends Controller
     }
 
     /**
-     * @Route("/hello/{name}.{_format}", defaults={"_format"="html", "name"="there"}, name="hello")
+     * @Route("/error", name="error")
+     */
+    public function errorAction()
+    {
+        throw $this->createNotFoundException();
+    }
+
+    /**
+     * @Route("/hello/{name}.{_format}",
+     *  defaults={"_format"="json", "name"="there"},
+     *  requirements = { "_format" = "json" },
+     *  name="hello")
+     *
      */
     public function helloAction($name, $_format)
     {
