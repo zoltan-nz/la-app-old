@@ -23,4 +23,14 @@ class DefaultController extends Controller
     {
         return new Response('Just a plain text response');
     }
+
+    /**
+     * @Route("/hello/{name}", name="hello")
+     */
+    public function helloAction($name)
+    {
+        return $this->render('default/hello.html.twig', array(
+            'name' => $name
+        ));
+    }
 }
