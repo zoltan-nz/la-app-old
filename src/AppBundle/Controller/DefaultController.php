@@ -13,8 +13,8 @@ class DefaultController extends Controller
      */
     public function indexAction()
     {
-//        return $this->render('default/index.html.twig', ['page_title' => 'Home Page']);
-        return $this->redirectToRoute('hello', ['name'=>'zoltan']);
+        return $this->render('default/index.html.twig', ['page_title' => 'Home Page']);
+//        return $this->redirectToRoute('hello', ['name'=>'zoltan']);
     }
 
     /**
